@@ -1,0 +1,79 @@
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 4rem 1rem;
+  color: #f5f0e8;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.hero-copy .pill {
+  background: rgba(201,168,76,0.2);
+  color: #c9a84c;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-copy h1 { font-size: 2.8rem; margin: 0 0 1rem; line-height: 1.2; }
+.hero-copy p { color: #9a9a9a; font-size: 1.05rem; margin-bottom: 2rem; }
+
+.stats { display: flex; gap: 2rem; }
+.stats div { display: flex; flex-direction: column; }
+.stats strong { font-size: 1.4rem; color: #c9a84c; }
+.stats span { font-size: 0.8rem; color: #9a9a9a; }
+
+
+.hero-art { position: relative; height: 320px; }
+.hero-card { position: absolute; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.hero-card img { width: 100%; height: 100%; object-fit: cover; }
+
+/* velika slika (desna) */
+.hero-card.big { width: 65%; height: 280px; top: 0; right: 0; }
+
+/* manja slika (leva) */
+.hero-card.small { width: 50%; height: 200px; bottom: -20px; left: 0; }
+
+/* osnovni stil za bedz (ostaje levo za manju sliku, u donjem levom uglu manje slike) */
+.badge { 
+  position: absolute; 
+  bottom: 10px; 
+  left: 10px; 
+  background: rgba(0,0,0,0.7); 
+  color: white; 
+  padding: 0.3rem 0.7rem; 
+  border-radius: 20px; 
+  font-size: 0.75rem; 
+}
+
+/* morala sam da menjam zbog te dve slike: pomera bedz na desnu stranu SAMO na velikoj kartici */
+.hero-card.big .badge {
+  left: auto;   /* ponistava levo poravnanje */
+  right: 10px;  /* pomera tekst skroz desno unutar slike */
+}
+
+
+.section { padding: 4rem 1rem; }
+.section.alt { background: #f9f6f0; }
+.section-head { margin-bottom: 2rem; }
+.section-head h2 { font-size: 1.8rem; color: #1a1a2e; margin: 0; }
+
+.grid { display: grid; gap: 1.5rem; }
+.grid.cats { grid-template-columns: repeat(3, 1fr); }
+.grid.rest { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 768px) {
+  .grid.cats, .grid.rest { grid-template-columns: 1fr 1fr; }
+}
+
+.cat { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; height: 160px; }
+.cat img { width: 100%; height: 100%; object-fit: cover; }
+.cat span { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white; padding: 1rem 0.75rem 0.75rem; font-weight: 600; }

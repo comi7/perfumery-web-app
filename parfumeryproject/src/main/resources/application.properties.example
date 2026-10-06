@@ -1,0 +1,26 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/parfumery?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+spring.datasource.username=DATABASE_USERNAME
+spring.datasource.password=DATABASE_PASSWORD
+
+
+#Hibernate postavke
+#automatski kreira/menja tabele prema entitetima (create, update, validate, none...)
+spring.jpa.hibernate.ddl-auto=update
+#prikazuje sql upite u konzoli
+spring.jpa.show-sql=true
+#formatira sql da bude citljiv u izlazu
+spring.jpa.properties.hibernate.format_sql=true
+
+#kad se user uspesno uloguje, server generise token i potpisuje ga ovim kljucem
+#to sprecava korisnike da sami menjaju podatke unutar tokena (npr. ulogu)
+#ako bi neko izmenio token, server bi to primetio jer se potpis ne bi poklapao sa ovim tajnim kljucem
+app.jwt.secret=JWT_SECRET_KEY
+
+app.jwt.expiration-ms=86400000
+
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=MAIL_USERNAME
+spring.mail.password=MAIL_PASSWORD
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true

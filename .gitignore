@@ -1,0 +1,13 @@
+# Backend 
+parfumeryproject/target/ 
+parfumeryproject/.idea/ 
+parfumeryproject/*.iml 
+parfumeryproject/nbproject/ 
+parfumeryproject/src/main/resources/application.properties 
+# Frontend 
+parfumeryfront/node_modules/ 
+parfumeryfront/.env 
+parfumeryfront/build/ 
+# OS 
+.DS_Store 
+Thumbs.db 
