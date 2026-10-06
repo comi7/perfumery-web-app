@@ -16,7 +16,7 @@ Full-stack web application for perfumery management built with Java Spring Boot 
 4. Backend runs on `http://localhost:8080`
 
 ### Frontend
-1. `cd parfumeryfront`
+1. `cd perfumeryfront`
 2. `npm install`
 3. `npm start`
 4. Frontend runs on `http://localhost:3000`
@@ -25,7 +25,7 @@ Full-stack web application for perfumery management built with Java Spring Boot 
 
 ```text
 perfumery-web-app
- ├── perfumeryproject
+ ├── parfumeryproject
  └── perfumeryfront
 ```
 
